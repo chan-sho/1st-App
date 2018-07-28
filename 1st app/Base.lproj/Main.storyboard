@@ -18,21 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6v7-3q-CVU">
-                                <rect key="frame" x="0.0" y="54" width="414" height="682"/>
-                            </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-2S-aZU">
                                 <rect key="frame" x="0.0" y="23" width="414" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6v7-3q-CVU">
+                                <rect key="frame" x="0.0" y="54" width="414" height="682"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC4-FN-4bG">
+                                <rect key="frame" x="68" y="54" width="278" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GC4-FN-4bG" firstAttribute="top" secondItem="6v7-3q-CVU" secondAttribute="top" id="AR7-Tf-Acd"/>
                             <constraint firstItem="EM5-2S-aZU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="E9o-LG-Suc"/>
                             <constraint firstItem="6v7-3q-CVU" firstAttribute="trailing" secondItem="EM5-2S-aZU" secondAttribute="trailing" id="Fkg-Xn-ia2"/>
                             <constraint firstItem="6v7-3q-CVU" firstAttribute="top" secondItem="EM5-2S-aZU" secondAttribute="bottom" constant="1" id="Grc-ko-3fS"/>
+                            <constraint firstItem="GC4-FN-4bG" firstAttribute="centerX" secondItem="EM5-2S-aZU" secondAttribute="centerX" id="Q3O-y3-iv0"/>
+                            <constraint firstItem="GC4-FN-4bG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="SFP-F8-0Os"/>
                             <constraint firstItem="6v7-3q-CVU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZGg-mw-Mos"/>
                             <constraint firstItem="6v7-3q-CVU" firstAttribute="leading" secondItem="EM5-2S-aZU" secondAttribute="leading" id="cZL-Io-1zd"/>
                             <constraint firstAttribute="trailing" secondItem="EM5-2S-aZU" secondAttribute="trailing" id="jf9-mu-rWG"/>
@@ -43,11 +52,12 @@
                     <connections>
                         <outlet property="displayMap" destination="6v7-3q-CVU" id="kag-Mt-sKU"/>
                         <outlet property="inputText" destination="EM5-2S-aZU" id="3WK-d9-iUd"/>
+                        <outlet property="label" destination="GC4-FN-4bG" id="sFX-oW-PUm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="118"/>
+            <point key="canvasLocation" x="115.94202898550725" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>

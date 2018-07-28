@@ -10,11 +10,15 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController,UITextFieldDelegate {
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         inputText.delegate = self
+        label.text = "↑ STEP1: 投稿する場所を検索"
+        label.textColor = UIColor.blue // 青
+        label.backgroundColor = UIColor.white // 白
     }
     
     override func didReceiveMemoryWarning() {
