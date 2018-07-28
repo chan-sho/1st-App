@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,11 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6v7-3q-CVU">
-                                <rect key="frame" x="0.0" y="30" width="414" height="706"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6v7-3q-CVU">
+                                <rect key="frame" x="0.0" y="54" width="414" height="682"/>
                             </mapView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-2S-aZU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-2S-aZU">
+                                <rect key="frame" x="0.0" y="23" width="414" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
@@ -30,13 +31,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6v7-3q-CVU" firstAttribute="top" secondItem="EM5-2S-aZU" secondAttribute="bottom" id="0j3-hO-Ar6"/>
-                            <constraint firstItem="EM5-2S-aZU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6h4-Jj-ZoK"/>
-                            <constraint firstItem="EM5-2S-aZU" firstAttribute="leading" secondItem="6v7-3q-CVU" secondAttribute="leading" id="Cwq-2P-ZNT"/>
-                            <constraint firstItem="EM5-2S-aZU" firstAttribute="trailing" secondItem="6v7-3q-CVU" secondAttribute="trailing" id="OtH-Og-N2p"/>
-                            <constraint firstItem="6v7-3q-CVU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UFo-s2-IdJ"/>
-                            <constraint firstItem="EM5-2S-aZU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h3z-Hg-vCz"/>
-                            <constraint firstAttribute="trailing" secondItem="EM5-2S-aZU" secondAttribute="trailing" id="vPr-b1-Rmv"/>
+                            <constraint firstAttribute="trailing" secondItem="EM5-2S-aZU" secondAttribute="trailing" id="GYm-Ov-aSh"/>
+                            <constraint firstItem="6v7-3q-CVU" firstAttribute="top" secondItem="EM5-2S-aZU" secondAttribute="bottom" constant="1" id="JLw-Ue-rC7"/>
+                            <constraint firstItem="EM5-2S-aZU" firstAttribute="leading" secondItem="6v7-3q-CVU" secondAttribute="leading" id="KuX-t5-aX8"/>
+                            <constraint firstItem="6v7-3q-CVU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SFT-Ve-nJW"/>
+                            <constraint firstItem="EM5-2S-aZU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i2U-fG-3IX"/>
+                            <constraint firstItem="EM5-2S-aZU" firstAttribute="trailing" secondItem="6v7-3q-CVU" secondAttribute="trailing" id="iox-lg-M86"/>
+                            <constraint firstItem="EM5-2S-aZU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-4" id="s63-U5-3s5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -47,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="117.39130434782609" y="118.20652173913044"/>
         </scene>
     </scenes>
 </document>
