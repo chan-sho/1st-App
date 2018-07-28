@@ -11,7 +11,6 @@ import MapKit
 
 class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var buttonForsearchPlace: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +18,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
         inputText.delegate = self
         
         label.text = "↑ STEP1: 投稿する場所を検索"
-        label.textColor = UIColor.blue // 青
+        label.textColor = UIColor.red // 赤
         label.backgroundColor = UIColor.white // 白
         
-        buttonForsearchPlace.setTitle("住所を検索して投稿", for: UIControlState.normal)
-        buttonForsearchPlace.setTitleColor(UIColor.red, for: UIControlState.normal)
-        buttonForsearchPlace.layer.borderColor = UIColor.red.cgColor
-        buttonForsearchPlace.layer.borderWidth = 1.0
-        buttonForsearchPlace.layer.cornerRadius = 10.0 //丸みを数値で変更できる
     }
     
     override func didReceiveMemoryWarning() {
