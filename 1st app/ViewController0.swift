@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController0: UIViewController {
+    @IBOutlet weak var buttonForCurrentPlace: UIButton!
+    
     @IBOutlet weak var buttonForSearchPlace: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonForCurrentPlace.setTitle("現在地から投稿", for: UIControlState.normal)
+        buttonForCurrentPlace.setTitleColor(UIColor.blue, for: UIControlState.normal)
+        buttonForCurrentPlace.layer.borderColor = UIColor.blue.cgColor
+        buttonForCurrentPlace.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        buttonForCurrentPlace.layer.borderWidth = 2.0
+        buttonForCurrentPlace.layer.cornerRadius = 10.0 //丸みを数値で変更できる
         
         buttonForSearchPlace.setTitle("場所を検索して投稿", for: UIControlState.normal)
         buttonForSearchPlace.setTitleColor(UIColor.red, for: UIControlState.normal)

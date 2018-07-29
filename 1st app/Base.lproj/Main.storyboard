@@ -19,6 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mb-4f-9Ft">
+                                <rect key="frame" x="20" y="130" width="374" height="210"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1n-jh-dRO">
                                 <rect key="frame" x="20" y="416" width="374" height="210"/>
                                 <state key="normal" title="Button"/>
@@ -29,14 +33,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="5Mb-4f-9Ft" firstAttribute="trailing" secondItem="b1n-jh-dRO" secondAttribute="trailing" id="1I7-Cx-tW2"/>
                             <constraint firstItem="b1n-jh-dRO" firstAttribute="trailing" secondItem="jSM-QU-mLc" secondAttribute="trailingMargin" id="5Sc-RK-hea"/>
+                            <constraint firstItem="b1n-jh-dRO" firstAttribute="top" secondItem="5Mb-4f-9Ft" secondAttribute="bottom" constant="76" id="Caw-VC-h4s"/>
+                            <constraint firstItem="5Mb-4f-9Ft" firstAttribute="top" secondItem="1tT-al-Zbd" secondAttribute="top" constant="110" id="GCS-79-hq3"/>
                             <constraint firstItem="b1n-jh-dRO" firstAttribute="top" secondItem="1tT-al-Zbd" secondAttribute="top" constant="396" id="JXL-ud-xhV"/>
+                            <constraint firstItem="5Mb-4f-9Ft" firstAttribute="leading" secondItem="b1n-jh-dRO" secondAttribute="leading" id="akD-X4-U1A"/>
                             <constraint firstItem="1tT-al-Zbd" firstAttribute="bottom" secondItem="b1n-jh-dRO" secondAttribute="bottom" constant="110" id="k5B-i4-ZSB"/>
                             <constraint firstItem="b1n-jh-dRO" firstAttribute="leading" secondItem="jSM-QU-mLc" secondAttribute="leadingMargin" id="ytr-UX-yH9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1tT-al-Zbd"/>
                     </view>
                     <connections>
+                        <outlet property="buttonForCurrentPlace" destination="5Mb-4f-9Ft" id="eKa-fW-Kba"/>
                         <outlet property="buttonForSearchPlace" destination="b1n-jh-dRO" id="JQz-SW-A70"/>
                     </connections>
                 </viewController>
@@ -65,7 +74,7 @@
                                 <rect key="frame" x="0.0" y="59" width="414" height="677"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="tok-it-X2n" appends="YES" id="RvN-Is-gGx"/>
+                                    <outletCollection property="gestureRecognizers" destination="RVc-BT-H2c" appends="YES" id="Mm2-13-zrv"/>
                                 </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC4-FN-4bG">
@@ -109,9 +118,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="tok-it-X2n">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="RVc-BT-H2c">
                     <connections>
-                        <action selector="pressMap:" destination="BYZ-38-t0r" id="oLj-xh-Pxn"/>
+                        <action selector="longPressGesture:" destination="BYZ-38-t0r" id="3I1-b7-F5P"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
