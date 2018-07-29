@@ -37,7 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="1tT-al-Zbd"/>
                     </view>
                     <connections>
-                        <outlet property="buttonForsearchPlace" destination="b1n-jh-dRO" id="S71-rw-BGs"/>
+                        <outlet property="buttonForSearchPlace" destination="b1n-jh-dRO" id="JQz-SW-A70"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kD2-9c-Vof" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -63,6 +63,10 @@
                             </textField>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6v7-3q-CVU">
                                 <rect key="frame" x="0.0" y="59" width="414" height="677"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tok-it-X2n" appends="YES" id="RvN-Is-gGx"/>
+                                </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC4-FN-4bG">
                                 <rect key="frame" x="68" y="59" width="278" height="21"/>
@@ -71,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8h-Mj-YXN">
-                                <rect key="frame" x="0.0" y="59" width="50" height="24"/>
+                                <rect key="frame" x="0.0" y="59" width="60" height="24"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="5tO-dS-b4l" kind="show" identifier="toViewController0" id="rYM-MB-FhA"/>
@@ -80,32 +84,38 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="G8h-Mj-YXN" firstAttribute="top" secondItem="GC4-FN-4bG" secondAttribute="top" id="1mZ-DT-D12"/>
                             <constraint firstItem="EM5-2S-aZU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="3" id="6sf-qR-o2s"/>
                             <constraint firstItem="EM5-2S-aZU" firstAttribute="trailing" secondItem="6v7-3q-CVU" secondAttribute="trailing" id="9VE-hK-kjr"/>
                             <constraint firstItem="GC4-FN-4bG" firstAttribute="top" secondItem="6v7-3q-CVU" secondAttribute="top" id="AR7-Tf-Acd"/>
-                            <constraint firstItem="G8h-Mj-YXN" firstAttribute="top" secondItem="GC4-FN-4bG" secondAttribute="top" id="CHS-TA-IIe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G8h-Mj-YXN" secondAttribute="bottom" constant="653" id="Kyp-lT-rco"/>
                             <constraint firstItem="EM5-2S-aZU" firstAttribute="leading" secondItem="6v7-3q-CVU" secondAttribute="leading" id="Lzu-g2-KUx"/>
+                            <constraint firstItem="G8h-Mj-YXN" firstAttribute="leading" secondItem="EM5-2S-aZU" secondAttribute="leading" id="Mg4-wN-hIt"/>
                             <constraint firstItem="GC4-FN-4bG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="SFP-F8-0Os"/>
                             <constraint firstItem="6v7-3q-CVU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZGg-mw-Mos"/>
                             <constraint firstItem="EM5-2S-aZU" firstAttribute="centerX" secondItem="GC4-FN-4bG" secondAttribute="centerX" id="Zjb-ng-4qn"/>
                             <constraint firstItem="EM5-2S-aZU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aqp-Md-0rJ"/>
                             <constraint firstAttribute="trailing" secondItem="EM5-2S-aZU" secondAttribute="trailing" id="ezB-wX-NeZ"/>
-                            <constraint firstItem="G8h-Mj-YXN" firstAttribute="leading" secondItem="EM5-2S-aZU" secondAttribute="leading" id="lP5-VA-IQZ"/>
-                            <constraint firstItem="GC4-FN-4bG" firstAttribute="leading" secondItem="G8h-Mj-YXN" secondAttribute="trailing" constant="18" id="m7Z-OB-703"/>
+                            <constraint firstItem="GC4-FN-4bG" firstAttribute="leading" secondItem="G8h-Mj-YXN" secondAttribute="trailing" constant="8" symbolic="YES" id="mqW-jT-Nb9"/>
                             <constraint firstItem="6v7-3q-CVU" firstAttribute="top" secondItem="EM5-2S-aZU" secondAttribute="bottom" constant="1" id="nrP-Yb-gUp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G8h-Mj-YXN" secondAttribute="bottom" constant="653" id="uyU-Hj-4ni"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buttonToBack" destination="G8h-Mj-YXN" id="wsP-V5-owC"/>
                         <outlet property="displayMap" destination="6v7-3q-CVU" id="kag-Mt-sKU"/>
                         <outlet property="inputText" destination="EM5-2S-aZU" id="3WK-d9-iUd"/>
                         <outlet property="label" destination="GC4-FN-4bG" id="sFX-oW-PUm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="tok-it-X2n">
+                    <connections>
+                        <action selector="pressMap:" destination="BYZ-38-t0r" id="oLj-xh-Pxn"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="115" y="117"/>
+            <point key="canvasLocation" x="114.49275362318842" y="116.57608695652175"/>
         </scene>
     </scenes>
 </document>

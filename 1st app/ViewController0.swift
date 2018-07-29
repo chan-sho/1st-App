@@ -9,17 +9,17 @@
 import UIKit
 
 class ViewController0: UIViewController {
-    @IBOutlet weak var buttonForsearchPlace: UIButton!
+    @IBOutlet weak var buttonForSearchPlace: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttonForsearchPlace.setTitle("場所を検索して投稿", for: UIControlState.normal)
-        buttonForsearchPlace.setTitleColor(UIColor.red, for: UIControlState.normal)
-        buttonForsearchPlace.layer.borderColor = UIColor.red.cgColor
-        buttonForsearchPlace.titleLabel?.font = UIFont.systemFont(ofSize: 30)
-        buttonForsearchPlace.layer.borderWidth = 2.0
-        buttonForsearchPlace.layer.cornerRadius = 10.0 //丸みを数値で変更できる
+        buttonForSearchPlace.setTitle("場所を検索して投稿", for: UIControlState.normal)
+        buttonForSearchPlace.setTitleColor(UIColor.red, for: UIControlState.normal)
+        buttonForSearchPlace.layer.borderColor = UIColor.red.cgColor
+        buttonForSearchPlace.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        buttonForSearchPlace.layer.borderWidth = 2.0
+        buttonForSearchPlace.layer.cornerRadius = 10.0 //丸みを数値で変更できる
 
         // Do any additional setup after loading the view.
     }

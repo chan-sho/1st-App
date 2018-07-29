@@ -11,6 +11,7 @@ import MapKit
 
 class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var buttonToBack: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
         label.textColor = UIColor.red // 赤
         label.backgroundColor = UIColor.white // 白
         
+        buttonToBack.setTitle("戻る", for: UIControlState.normal)
+        buttonToBack.setTitleColor(UIColor.white, for: UIControlState.normal)
+        buttonToBack.backgroundColor = UIColor.gray
+        buttonToBack.layer.borderColor = UIColor.black.cgColor
+        buttonToBack.titleLabel?.font = UIFont.systemFont(ofSize: 17)
+        buttonToBack.layer.borderWidth = 1.0
+        buttonToBack.layer.cornerRadius = 10.0 //丸みを数値で変更できる
     }
     
     override func didReceiveMemoryWarning() {
