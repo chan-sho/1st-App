@@ -8,11 +8,13 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class ViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var buttonToBack: UIButton!
 
+    var pinView:MKPinAnnotationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         inputText.delegate = self
         
         label.text = "↑ 投稿する場所を検索"
-        label.textColor = UIColor.black // 赤
+        label.textColor = UIColor.black // 黒
         label.backgroundColor = UIColor.white // 白
         
         buttonToBack.setTitle("戻る", for: UIControlState.normal)
@@ -68,6 +70,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
+    
     @IBOutlet weak var inputText: UITextField!
     @IBOutlet weak var displayMap: MKMapView!
     
@@ -80,7 +83,8 @@ class ViewController: UIViewController,UITextFieldDelegate {
         //senderから長押しした地図上の座標を取得
         let tappedLocation = sender.location(in: displayMap)
         let tappedPoint = displayMap.convert(tappedLocation, toCoordinateFrom: displayMap)
-        
+        // update annotation
+        displayMap.removeAnnotations(displayMap.annotations)
         //ピンの生成
         let pin = MKPointAnnotation()
         //ピンを置く場所を指定
@@ -91,8 +95,19 @@ class ViewController: UIViewController,UITextFieldDelegate {
         pin.subtitle = "OKなら「投稿」をクリック"
         //ピンをdisplayMapの上に置く
         self.displayMap.addAnnotation(pin)
-    
     }
-    
+    //アノテーションビューを返すメソッド
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        //アノテーションビューを作成する。
+        let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        //アノテーションビューに座標、タイトル、サブタイトルを設定する。
+        pinView.annotation = annotation
+        //アノテーションビューに色を設定する。
+        pinView.backgroundColor = UIColor.white
+        //吹き出しを表示可能にする。
+        pinView.canShowCallout = true
+        
+        return pinView
+    }
 }
 
